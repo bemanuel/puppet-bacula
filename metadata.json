@@ -1,11 +1,10 @@
 {
   "name": "puppet-bacula",
   "version": "0.0.3-rc0",
-  "source": "https://github.com/voxpupuli/puppet-bacula",
   "author": "voxpupuli",
-  "license": "Apache-2.0",
   "summary": "Installs and configures Bacula",
-  "description": "Installs and configures Bacula",
+  "license": "Apache-2.0",
+  "source": "https://github.com/voxpupuli/puppet-bacula",
   "project_page": "https://github.com/voxpupuli/puppet-bacula",
   "dependencies": [
     {
@@ -20,5 +19,41 @@
       "name": "puppetlabs/sqlite",
       "version_range": ">= 0.0.1"
     }
-  ]
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7.0"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "16.04"
+      ]
+    },
+    {
+      "operatingsystem": "windows",
+      "operatingsystemrelease": [
+        "2012 R2"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.7.0 < 6.0.0"
+    }
+  ],
+  "description": "Installs and configures Bacula",
+  "pdk-version": "1.4.1",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
+  "template-ref": "1.4.1-0-g52adbbb"
 }
