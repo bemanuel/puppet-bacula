@@ -76,6 +76,16 @@ class bacula::common (
         }
       }
 
+      'pgsql': {
+        pgsql::db { $db_database:
+          user     => $db_user,
+          password => $db_password,
+          host     => $db_host,
+          notify   => $notify_database,
+          require  => $mysql_class,
+        }
+      }
+
       default: {
         fail "The bacula module does not support managing the ${db_backend} backend database"
       }
