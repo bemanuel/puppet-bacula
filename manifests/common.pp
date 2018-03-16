@@ -77,7 +77,7 @@ class bacula::common (
       }
 
       'pgsql': {
-        pgsql::db { $db_database:
+        postgresql::server::db { $db_database:
           user     => $db_user,
           password => $db_password,
           host     => $db_host,
