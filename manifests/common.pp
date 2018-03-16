@@ -37,6 +37,7 @@ class bacula::common (
   $db_parameters = $db_backend ? {
     'sqlite' => '',
     'mysql'  => "--host=${db_host} --user=${db_user} --password=${db_password} --port=${db_port} --database=${db_database}",
+    'pgsql'  => "--host=${db_host} --username=${db_user} --password=${db_password} --port=${db_port} ${db_database}",
   }
 
   if $manage_db_tables {
