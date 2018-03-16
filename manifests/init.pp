@@ -4,6 +4,8 @@
 # infrastructure. This is the only class that needs to be declared.
 #
 # Parameters:
+#   $install_package:
+#     Install system package
 #   $db_backend:
 #     The database backend to use
 #   $mail_to:
@@ -97,6 +99,7 @@
 #   clients           => $clients,
 # }
 class bacula (
+  $install_package	   = $bacula::config::install_package,
   $db_backend              = $bacula::config::db_backend,
   $db_user                 = $bacula::config::db_user,
   $db_password             = $bacula::config::db_password,

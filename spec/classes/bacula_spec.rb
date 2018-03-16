@@ -81,11 +81,13 @@ describe 'bacula' do
     it { should contain_file '/var/spool/bacula' }
 
     it { should contain_group 'bacula' }
-
-    it { should contain_package 'bacula-client' }
-    it { should contain_package 'bacula-console' }
-    it { should contain_package 'bacula-director-sqlite3' }
-    it { should contain_package 'bacula-sd-sqlite3' }
+    
+    context 'when declaring install_package is true' do
+      it { should contain_package 'bacula-client' }
+      it { should contain_package 'bacula-console' }
+      it { should contain_package 'bacula-director-sqlite3' }
+      it { should contain_package 'bacula-sd-sqlite3' }
+     end
 
     it { should contain_service 'bacula-director' }
     it { should contain_service 'bacula-fd' }
