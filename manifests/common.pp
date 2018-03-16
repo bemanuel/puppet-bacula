@@ -80,7 +80,6 @@ class bacula::common (
         postgresql::server::db { $db_database:
           user     => $db_user,
           password => $db_password,
-          host     => $db_host,
           notify   => $notify_database,
           require  => $mysql_class,
         }
