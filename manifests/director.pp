@@ -76,6 +76,7 @@ class bacula::director (
   $db_package = $db_backend ? {
     'mysql'  => $mysql_package,
     'sqlite' => $sqlite_package,
+    'pgsql' => $pgsql_package,
   }
 
   if $director_package {
