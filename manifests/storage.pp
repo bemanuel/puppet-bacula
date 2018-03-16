@@ -45,6 +45,7 @@ class bacula::storage(
     $storage_package = '',
     $mysql_package,
     $sqlite_package,
+    $pgsql_package,
     $console_password,
     $template = 'bacula/bacula-sd.conf.erb'
   ) {
@@ -57,6 +58,7 @@ class bacula::storage(
   $db_package = $db_backend ? {
     'mysql'  => $mysql_package,
     'sqlite' => $sqlite_package,
+    'pgsql' => $pgsql_package,
   }
 
   # This is necessary because the bacula-common package will
